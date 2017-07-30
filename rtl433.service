@@ -1,0 +1,11 @@
+[Unit]
+Description=rtl_433
+
+[Service]
+ExecStart=/home/rtl433sdr/bin/rtl_433 -q -s 1024000 -F json:/var/run/rtl433 -U -G
+# with systemd >= 232 use named fds, as per <https://serverfault.com/questions/791395/can-systemd-manage-a-pipeline/823973>
+User=rtl433sdr
+
+[Install]
+WantedBy=multi-user.target
+

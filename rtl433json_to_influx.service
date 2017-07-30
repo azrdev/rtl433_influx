@@ -1,0 +1,11 @@
+[Unit]
+Description=rtl_433 JSON to InfluxDB
+
+[Service]
+ExecStart=/usr/bin/python3 /home/rtl433sdr/bin/rtl433json_to_influx.py /var/run/rtl433
+# with systemd >= 232 use named fds, as per <https://serverfault.com/questions/791395/can-systemd-manage-a-pipeline/823973>
+User=rtl433sdr
+
+[Install]
+WantedBy=multi-user.target
+
