@@ -12,7 +12,7 @@ mappings = {
         'temperature': None,
         'temperature_C': None,
         'temperature_C1': None,
-        'temperature_C1': None,
+        'temperature_C2': None,
         'temperature_2_C': None,
         'temperature_1_C': None,
         'temperature_F': None,
